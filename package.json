@@ -1,0 +1,28 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A personal website made with NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtyanan/PersonalWebsite.git"
+  },
+  "author": "Terry (Tianyu)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wtyanan/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/wtyanan/PersonalWebsite#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
