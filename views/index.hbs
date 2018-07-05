@@ -22,11 +22,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
   <!-- main control CSS -->
   <script src="js/typed.min.js"></script>
@@ -42,7 +44,7 @@
   <nav id="header" class="navbar fixed-top navbar-expand-md navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="pic/logo.png" width="40" height="40" />
+        <img class="navbar-img" src="pic/logo.png" height="45" width="45" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -74,17 +76,22 @@
     <div class="home-overlay">
       <div class="container d-flex justify-content-center align-items-center flex-column home">
         <div class="title-text">
-          <span id="title"></span>
+          Hello World, I'm Terry Wang
         </div>
         <div class="typed-wrap">
-          <span id="identity"></span>
+          <span id="identity">&nbsp</span>
+        </div>
+        <div id="arrow-down" class="arrow-down">
+          <a href="#about">
+            <image class="arrow-down-pic" src="pic/double-arrow-down.png"></image>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="about" class="about-wrapper">
-    <div class="container" style="height: 100vh; padding-top: 60px;">
+    <div class="container" style="height: 100vh; padding-top: 80px;">
       About
     </div>
   </section>
