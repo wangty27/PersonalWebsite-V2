@@ -1,0 +1,80 @@
+*{ margin: 0; padding: 0}
+
+
+
+/* navbar style */
+#header {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-link {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* End */
+
+/* home style */
+
+/* .title-text {
+  font-size: 80px;
+}
+
+@media (max-width: 1200px) {
+  .title-text {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title-text {
+    font-size: 22px;
+  }
+} */
+
+/* End */
+
+.bg-black {
+  background: #111111;
+}
+
+.text-ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.home-wrapper {
+  background: url("../pic/home-background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51,51,51,0.5);
+}
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}

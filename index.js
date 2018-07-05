@@ -9,7 +9,7 @@ var app = express();
 app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(favicon(path.join(__dirname, 'assets', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'assets', 'pic', 'favicon.ico')));
 
 app.get('/', (req, res) => {
   res.render('index');
