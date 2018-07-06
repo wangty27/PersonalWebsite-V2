@@ -105,4 +105,20 @@ $(document).ready(function() {
   });
 
   //---
+
+  // contact direct
+
+  $("#contact-github").on('click', function() {
+    window.location.href="https://github.com/wtyanan";
+  });
+
+  $("#contact-email").on('click', function() {
+    window.location.href="mailto:terrywang@tianyu.ninja";
+  });
+
+  $("#contact-linkedin").on('click', function() {
+    window.location.href="https://www.linkedin.com/in/wtyanan/";
+  });
+
+  //---
 });

@@ -150,7 +150,9 @@
     </div>
   </section>
 
-  <section id="gap" class="gap"></section>
+  <section id="gap" class="gap gap-1">
+    <div class="mask"></div>
+  </section>
 
   <section id="experience" class="section-wrapper">
     <div class="container">
@@ -221,7 +223,9 @@
     </div>
   </section>
 
-  <section id="gap" class="gap"></section>
+  <section id="gap" class="gap gap-2">
+    <div class="mask"></div>
+  </section>
 
   <section id="project" class="section-wrapper">
     <div class="container">
@@ -231,10 +235,10 @@
       </div>
       <div class="project-content">
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
             <div class="project-logo d-flex justify-content-center align-items-center">
               <div id="project-MrSchedule" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-MrSchedule.png" class="project-img" />
+                <img src="pic/project-MrSchedule.png" class="project-img" alt="MrSchedule Logo" title="View on GitHub" />
               </div>
             </div>
             <div class="project-name">
@@ -259,10 +263,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
             <div class="project-logo d-flex justify-content-center align-items-center">
               <div id="project-Tetris" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-Tetris.png" class="project-img" />
+                <img src="pic/project-Tetris.png" class="project-img" alt="Tetris Logo" title="View on GitHub" />
               </div>
             </div>
             <div class="project-name">
@@ -287,10 +291,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
             <div class="project-logo d-flex justify-content-center align-items-center">
               <div id="project-KWCSSA" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-KWCSSA.png" class="project-img" />
+                <img src="pic/project-KWCSSA.png" class="project-img" alt="KWCSSACalendar Logo" title="View on GitHub" />
               </div>
             </div>
             <div class="project-name">
@@ -311,12 +315,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
             <div class="project-logo d-flex justify-content-center align-items-center">
               <div id="project-UWMilestone" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-UWMilestone.png" class="project-img" />
+                <img src="pic/project-UWMilestone.png" class="project-img" alt="UWMilestone Logo" title="View on GitHub" />
               </div>
             </div>
             <div class="project-name">
@@ -341,10 +343,10 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
             <div class="project-logo d-flex justify-content-center align-items-center">
               <div id="project-FMHelper" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-FMHelper.png" class="project-img" />
+                <img src="pic/project-FMHelper.png" class="project-img" alt="FMHelper Logo" title="View on GitHub" />
               </div>
             </div>
             <div class="project-name">
@@ -369,7 +371,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-12">
+          <div class="col-lg-4 col-sm-6 col-12">
           </div>
         </div>
       </div>
@@ -377,8 +379,64 @@
   </section>
 
   <section id="contact" class="contact-wrapper">
-    <div class="container">
-      About
+    <div class="contact-overlay">
+      <div class="container">
+        <div class="section-title text-center">
+          <h1>Contact</h1>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center">
+              <div id="contact-email" class="contact-method" title="Send Email">
+                <div class="contact-icon">
+                  <i class="far fa-envelope"></i>
+                </div>
+                <div class="contact-name">Email</div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center">
+              <div id="contact-github" class="contact-method" title="View GitHub">
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-name">GitHub</div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center">
+              <div id="contact-linkedin" class="contact-method" title="View LinkedIn">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-name">LinkedIn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{#if displayForm}}
+        <form id="contact-form" method="post" action="/contact">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12 d-flex flex-column">
+              <input id="name" type="text" name="name" placeholder="Your Name" required>
+              <input id="email" type="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="col-sm-6 col-xs-12 d-flex flex-column">
+              <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
+            </div>
+          </div>
+          <div style="text-align: center;"><button type="sumbit" class="submit-button">SEND MESSAGE</button></div>
+        </form>
+        {{else}}
+          <h3>Thanks {{sender}},</h3>
+          <h3 style="margin-bottom: 45px;">your message had been sent.</h3>
+        {{/if}}
+      </div>
+
+      <div class="footer d-flex flex-column justify-content-center align-items-center">
+        <div class="footer-row">&copy; Copyright 2018</div>
+        <div class="footer-row">All Right Reserved By Terry Wang</div>
+      </div>
+
     </div>
   </section>
 
