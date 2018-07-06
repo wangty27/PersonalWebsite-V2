@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'assets')));
 app.use(favicon(path.join(__dirname, 'assets', 'pic', 'favicon.ico')));
 
 app.get('/', (req, res) => {
-  res.render('index', { displayForm: true, sender: '123' });
+  res.render('index', { displayForm: false, sender: '123' });
 })
 
 app.get('/Resume-Terry', (req, res) => {

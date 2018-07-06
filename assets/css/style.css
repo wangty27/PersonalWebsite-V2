@@ -257,9 +257,9 @@ p {
   margin-bottom: 65px;
 }
 
-@media (max-width: 575.98px): {
+@media (max-width: 575.98px) {
   .about-img {
-    width: 250px;
+    width: 280px;
   }
 }
 
