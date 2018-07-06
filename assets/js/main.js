@@ -81,4 +81,28 @@ $(document).ready(function() {
   });
 
   //---
+
+  // project direct
+
+  $("#project-MrSchedule").on('click', function() {
+    window.location.href="https://github.com/wtyanan/Mr.Schedule";
+  });
+
+  $("#project-Tetris").on('click', function() {
+    window.location.href="https://github.com/wtyanan/Tetris";
+  });
+
+  $("#project-KWCSSA").on('click', function() {
+    window.location.href="https://github.com/wtyanan/KWCSSACalendar";
+  });
+
+  $("#project-UWMilestone").on('click', function() {
+    window.location.href="https://github.com/wtyanan/UWMilestone";
+  });
+
+  $("#project-FMHelper").on('click', function() {
+    window.location.href="https://github.com/wtyanan/FMHelper";
+  });
+
+  //---
 });
