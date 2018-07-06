@@ -69,4 +69,16 @@ $(document).ready(function() {
       loop: true
     });
   //---
+
+  // company direct
+
+  $(".exp-CMDI").on('click', function() {
+    window.location.href="http://www.cmdi.chinamobile.com/";
+  });
+
+  $(".exp-Finastra").on('click', function() {
+    window.location.href="https://www.finastra.com/";
+  });
+
+  //---
 });

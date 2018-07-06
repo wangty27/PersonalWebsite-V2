@@ -44,7 +44,7 @@
   <nav id="header" class="navbar fixed-top navbar-expand-md navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#home">
-        <img class="navbar-img mr-3" src="pic/logo.png" height="45" width="45" />
+        <img class="navbar-img mr-3" src="pic/logo.png" height="45" width="45" alt="Website Logo"/>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -83,21 +83,21 @@
         </div>
         <div id="arrow-down" class="arrow-down">
           <a href="#about">
-            <image class="arrow-down-pic" src="pic/double-arrow-down.png"></image>
+            <img class="arrow-down-pic" src="pic/double-arrow-down.png" alt="Down"/>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about-wrapper">
+  <section id="about" class="section-wrapper">
     <div class="container">
       <div class="section-title text-center">
         <h1>About me</h1>
         <div class="section-line"></div>
       </div>
       <div class="about-img">
-        <image src="pic/photo.jpg" class="img-fluid" alt="Personal Photo"></image>
+        <img src="pic/photo.jpg" class="about-img-src img-fluid" alt="Personal Photo" />
       </div>
       <div class="about-content">
         <div class="row">
@@ -150,20 +150,67 @@
 
   <section id="gap" class="gap"></section>
 
-  <section id="experience" class="experience-wrapper">
-    <div class="container" style="height: 100vh; padding-top: 60px;">
-      About
+  <section id="experience" class="section-wrapper">
+    <div class="container">
+      <div class="section-title text-center">
+        <h1>Experience</h1>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-content">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="exp-logo d-flex justify-content-center align-items-center">
+              <div class="exp-CMDI exp-img-wrapper d-flex justify-content-center align-items-center">
+                <img src="pic/exp-CMDI.png" class="img-fluid" title="Go to CMDI" alt="CMDI Logo"/>
+              </div>
+            </div>
+            <div class="exp-name">
+              China Mobile Group Design Institute Co., Ltd.
+            </div>
+            <div class="exp-date">
+              May 2017 - Aug 2017
+            </div>
+            <div class="exp-content">
+              <p>▸ Implemented “quick sort” to sort user location data by coordinates for analyzing user behaviors</p>
+              <p>▸ Developed a C program using C that divided Baidu Map into a matrix of coordinates to represent collected data</p>
+              <p>▸ Optimized internal website by implementing responsive features for mobile devices</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="exp-logo d-flex justify-content-center align-items-center">
+              <div class="exp-Finastra exp-img-wrapper d-flex justify-content-center align-items-center">
+                <img src="pic/exp-Finastra.png" class="img-fluid" title="Go to Finastra" alt="Finastra Logo"/>
+              </div>
+            </div>
+            <div class="exp-name">
+              Finastra
+            </div>
+            <div class="exp-date">
+              May 2018 - Present
+            </div>
+            <div class="exp-content">
+              <p>▸ Implemented a Yeoman generator with package selection for quick microservice scaffolding</p>
+              <p>▸ Implemented a Express middleware for validating incoming requests with AJV Schema</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="project" class="project-wrapper">
-    <div class="container" style="height: 100vh; padding-top: 60px;">
-      About
+  <section id="gap" class="gap"></section>
+
+  <section id="project" class="section-wrapper">
+    <div class="container">
+      <div class="section-title text-center">
+        <h1>Project</h1>
+        <div class="section-line"></div>
+      </div>
     </div>
   </section>
 
   <section id="contact" class="contact-wrapper">
-    <div class="container" style="height: 100vh; padding-top: 60px;">
+    <div class="container">
       About
     </div>
   </section>
