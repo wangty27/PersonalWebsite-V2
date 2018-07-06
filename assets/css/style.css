@@ -27,10 +27,13 @@ p {
   h1 {
     font-size: 40px;
   }
+  .resume-button {
+    margin-bottom: 30px;
+  }
 }
 
 .section-title {
-  padding-top: 75px;
+  padding-top: 85px;
   margin-bottom: 75px;
 }
 
@@ -211,15 +214,36 @@ p {
 }
 
 .about-img {
-  width: 300px;
+  width: 320px;
   margin: auto;
   border: 3px solid #ffffff;
   border-radius: 50%;
-  margin-bottom: 41px;
+  margin-bottom: 65px;
+}
+
+.about-content {
+  margin-bottom: 75px;
 }
 
 .img-fluid {
   border-radius: 50%;
+}
+
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40%;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.resume-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* End */

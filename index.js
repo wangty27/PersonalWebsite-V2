@@ -15,6 +15,13 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.get('/Resume-Terry', (req, res) => {
+  fs.readFile(path.join(__dirname, 'assets', 'Resume - Terry Wang 2018.pdf'), (err, data) => {
+    res.contentType('application/pdf');
+    res.send(data);
+  });
+})
+
 app.use(function (req, res, next) {
   var err = new Error('File Not Found');
   err.status = 404;
