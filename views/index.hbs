@@ -123,7 +123,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-              <a href="/Resume-Terry" class="resume-button">RESUME</a>
+              <a href="/Resume_Terry_Wang.pdf" class="resume-button">RESUME</a>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -339,7 +339,7 @@
               </div>
               <div class="text-wrapper">
                 <p class="text-bullet">▸</p>
-                <P>Tech Stacks: JavaScript, Node.js, Express, MongoDB, Nodemailer, Handlebars, Bootstrap 4</P>
+                <P>Tech Stacks: JavaScript, Node.js, Express, MongoDB, Nodemailer, Handlebars, Bootstrap</P>
               </div>
             </div>
           </div>
@@ -413,23 +413,25 @@
             </div>
           </div>
         </div>
-        {{#if displayForm}}
-        <form id="contact-form" method="post" action="/contact">
-          <div class="row">
-            <div class="col-sm-6 col-xs-12 d-flex flex-column">
-              <input id="name" type="text" name="name" placeholder="Your Name" required>
-              <input id="email" type="email" name="email" placeholder="E-mail" required>
+        <form id="contact-form">
+          <div id="contact-inputs">
+            <div class="row">
+              <div class="col-sm-6 col-xs-12 d-flex flex-column">
+                <input id="name" type="text" name="name" placeholder="Your Name" required>
+                <input id="email" type="email" name="email" placeholder="E-mail" required>
+              </div>
+              <div class="col-sm-6 col-xs-12 d-flex flex-column">
+                <textarea id="msg" name="msg" placeholder="Write Your message here ..." required></textarea>
+              </div>
             </div>
-            <div class="col-sm-6 col-xs-12 d-flex flex-column">
-              <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
-            </div>
+            <div style="text-align: center;"><button type="sumbit" class="submit-button">SEND MESSAGE</button></div>
           </div>
-          <div style="text-align: center;"><button type="sumbit" class="submit-button">SEND MESSAGE</button></div>
+          <h3 id="contact-loading" style="display: none;">Sending...</h3>
+          <h3 class="contact-thank contact-thank-top"></h3>
+          <h3 class="contact-thank" style="margin-bottom: 45px;">your message has been sent.</h3>
+          <h3 class="contact-fail" style="display: none">Sorry, your message could not be delievered at this time.</h3>
+          <h3 class="contact-fail" style="display: none">Please try again, thank you.</h3>
         </form>
-        {{else}}
-          <h3>Thanks {{sender}},</h3>
-          <h3 style="margin-bottom: 45px;">your message had been sent.</h3>
-        {{/if}}
       </div>
 
       <div class="footer d-flex flex-column justify-content-center align-items-center">
@@ -439,6 +441,10 @@
 
     </div>
   </section>
+
+  <a href="#home" class="goto-top-button" style="display: none;">
+    <img src="pic/double-arrow-down.png" class="goto-top-img" />
+  </a>
 
 </body>
 </html>

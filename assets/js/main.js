@@ -1,11 +1,13 @@
 var $window = $(window);
 
 $(document).ready(function() {
-  // navbar
+  // navbar + gotoTop
 
   if ($window.scrollTop() > 200){
     $("#header").addClass("bg-black");
   }
+
+  var expTopPos = $('#experience').position().top - $window.height() / 2;
 
   var toggle = false;
   $window.scroll(function() {
@@ -13,6 +15,11 @@ $(document).ready(function() {
       $("#header").removeClass("bg-black");
     } else {
       $("#header").addClass("bg-black");
+    }
+    if ($(this).scrollTop() >= expTopPos) {
+      $(".goto-top-button").fadeIn(500);
+    } else {
+      $(".goto-top-button").fadeOut(500);
     }
   });
 
@@ -61,13 +68,13 @@ $(document).ready(function() {
   // typed
 
   var identity = new Typed('#identity', {
-      strings: ['&nbsp', 'Student @ UWaterloo.', 'Passionate Coder.', 'Full-Stack Developer.', 'Software Developer.', 'Mobile Developer.' ],
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 1500,
-      smartBackspace: false,
-      loop: true
-    });
+    strings: ['&nbsp', 'Student @ UWaterloo.', 'Passionate Coder.', 'Full-Stack Developer.', 'Software Developer.', 'Mobile Developer.' ],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 1500,
+    smartBackspace: false,
+    loop: true
+  });
   //---
 
   // company direct
@@ -121,4 +128,38 @@ $(document).ready(function() {
   });
 
   //---
+
+  $("#contact-form").submit(function (e) {
+      e.preventDefault();
+      // e.stopPropagation();
+
+      const name = $("#name").val();
+      const email = $("#email").val();
+      const msg = $("#msg").val();
+      var data = { name, email, msg };
+      var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      if (!re.test(String(email).toLowerCase())){
+        $('#email').attr("placeholder","Please enter a valid E-mail");
+        $("#email").val("")
+        $("#email").addClass("invalid-input");
+      } else {
+        $("#contact-inputs").fadeOut(500);
+        $('#contact-loading').delay(501).fadeIn(500);
+        $.ajax({
+          type: "POST",
+          url: "/contact",
+          data: data,
+          dataType: "json",
+          success: (data) => {
+            $("#contact-loading").delay(300).fadeOut(500);
+            if (data.success) {
+              $(".contact-thank").delay(810).fadeIn(500);
+            } else {
+              $(".contact-fail").delay(810).fadeIn(500);
+            }
+          }
+        });
+      }
+    });
+
 });

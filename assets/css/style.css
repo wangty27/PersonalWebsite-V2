@@ -3,7 +3,7 @@
 /* global style */
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 body {
@@ -80,6 +80,41 @@ p {
   height: inherit;
   width: inherit;
   background: rgba(255, 213, 79, 0.35);
+}
+
+.goto-top-button {
+  background: rgba(0, 0, 0, 0.45);
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goto-top-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 575.98px) {
+  .goto-top-button {
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+}
+
+.goto-top-img {
+  height: 15px;
+  width: 15px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* End */
@@ -448,6 +483,7 @@ p {
 }
 
 #contact-form {
+  min-height: 290px;
   padding-bottom: 85px;
 }
 
@@ -485,6 +521,24 @@ input {
   opacity: 0.8;
 }
 
+/* class for changing placeholder color */
+.invalid-input::placeholder {
+  color: #ffd54f;
+}
+.invalid-input::-webkit-input-placeholder {
+  color: #ffd54f;
+}
+.invalid-input:-ms-input-placeholder {
+  color: #ffd54f;
+}
+.invalid-input::-moz-placeholder {
+  color: #ffd54f;
+}
+.invalid-input:-moz-placeholder {
+  color: #ffd54f;
+}
+/* End */
+
 textarea {
   height: 110px;
   width: 80%;
@@ -521,6 +575,10 @@ textarea {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.contact-thank {
+  display: none;
+}
+
 /* End */
 
 /* footer style */
@@ -532,6 +590,31 @@ textarea {
 .footer-row {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+/* End */
+
+/* fix background for mobile */
+
+
+
+@media (max-width: 1200px) {
+  .gap-1 {
+    background: url("../pic/gap-1.jpg") no-repeat center center scroll;
+  }
+
+  .gap-2 {
+    background: url("../pic/gap-2.jpg") no-repeat center center scroll;
+  }
+
+  .home-wrapper{
+    background: url("../pic/home-background.jpg") no-repeat center center scroll;
+  }
+
+  .contact-wrapper {
+    background: url("../pic/contact-background.jpg") no-repeat center center scroll;
+  }
+
 }
 
 /* End */

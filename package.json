@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/wtyanan/PersonalWebsite#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
+    "nodemailer": "^4.6.7",
     "path": "^0.12.7",
     "serve-favicon": "^2.5.0"
   },
