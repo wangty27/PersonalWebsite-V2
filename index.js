@@ -5,15 +5,20 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const moment = require('moment-timezone');
 
 const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
 
 var transporter = nodemailer.createTransport({
- service: 'gmail',
- auth: {
-        user: notify.email,
-        pass: notify.pass
-    }
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: notify.email,
+    pass: notify.pass
+  },
+  connectionTimeout: 30000,
+  greetingTimeout: 30000
 });
 
 var app = express();
@@ -30,13 +35,16 @@ app.get('/', (req, res) => {
 
 app.post('/contact', (req, res) => {
   const mailOptions = {
-    from: 'tianyu.ninja.notify@gmail.com',
+    from: 'MESSAGE NOTIFY<tianyu.ninja.notify@gmail.com>',
     to: 'terrywang@tianyu.ninja',
     subject: 'New Message From Website',
     html: `<h4>Name: ${req.body.name}<h4>
            <h4>Email: ${req.body.email}</h4>
            <h4>Message: ${req.body.msg}</h4>`
   };
+
+  var messageLog = `Name: ${req.body.name}, Email: ${req.body.email}, Message: ${req.body.msg}, Timestamp: ${moment().tz("America/New_York").format().replace(/T/, ' ').slice(0, 19)}\n`
+  fs.appendFileSync(path.join(__dirname, 'logs', 'message_logs.txt'), messageLog, 'utf8');
 
   transporter.sendMail(mailOptions, function (err, info) {
     if (err) {
