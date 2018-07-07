@@ -9,6 +9,10 @@ $(document).ready(function() {
 
   var expTopPos = $('#experience').position().top - $window.height() / 2;
 
+  if ($window.scrollTop() >= expTopPos) {
+    $(".goto-top-button").fadeIn(500);
+  }
+
   var toggle = false;
   $window.scroll(function() {
     if ($(this).scrollTop() <= 200 && !toggle){
