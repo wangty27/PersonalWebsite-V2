@@ -131,7 +131,6 @@ $(document).ready(function() {
 
   $("#contact-form").submit(function (e) {
       e.preventDefault();
-      // e.stopPropagation();
 
       const name = $("#name").val();
       const email = $("#email").val();
@@ -153,9 +152,9 @@ $(document).ready(function() {
           success: (data) => {
             $("#contact-loading").delay(300).fadeOut(500);
             if (data.success) {
-              $(".contact-thank").delay(810).fadeIn(500);
+              $(".contact-thank").delay(900).fadeIn(500);
             } else {
-              $(".contact-fail").delay(810).fadeIn(500);
+              $(".contact-fail").delay(1800).fadeIn(500);
             }
           }
         });

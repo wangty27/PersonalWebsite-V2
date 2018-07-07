@@ -7,6 +7,8 @@
 }
 
 body {
+  height: 100%;
+  width: 100%;
   background: #000000;
   color: #ffffff;
 }
@@ -579,6 +581,10 @@ textarea {
   display: none;
 }
 
+.contact-fail {
+  display: none;
+}
+
 /* End */
 
 /* footer style */
@@ -601,18 +607,61 @@ textarea {
 @media (max-width: 1200px) {
   .gap-1 {
     background: url("../pic/gap-1.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1366px;
+    -moz-background-size: auto 1366px;
+    -o-background-size: auto 1366px;
+    background-size: auto 1366px;
   }
 
   .gap-2 {
     background: url("../pic/gap-2.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1366px;
+    -moz-background-size: auto 1366px;
+    -o-background-size: auto 1366px;
+    background-size: auto 1366px;
   }
 
   .home-wrapper{
     background: url("../pic/home-background.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1366px;
+    -moz-background-size: auto 1366px;
+    -o-background-size: auto 1366px;
+    background-size: auto 1366px;
   }
 
   .contact-wrapper {
-    background: url("../pic/contact-background.jpg") no-repeat center center scroll;
+    background: url("../pic/contact-background-m.jpg") no-repeat bottom center scroll;
+  }
+
+}
+
+@media (max-width: 998px) {
+  .gap-1 {
+    background: url("../pic/gap-1.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1100px;
+    -moz-background-size: auto 1100px;
+    -o-background-size: auto 1100px;
+    background-size: auto 1100px;
+  }
+
+  .gap-2 {
+    background: url("../pic/gap-2.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1100px;
+    -moz-background-size: auto 1100px;
+    -o-background-size: auto 1100px;
+    background-size: auto 1100px;
+  }
+
+  .home-wrapper{
+    background: url("../pic/home-background.jpg") no-repeat center center scroll;
+    -webkit-background-size: auto 1100px;
+    -moz-background-size: auto 1100px;
+    -o-background-size: auto 1100px;
+    background-size: auto 1100px;
+  }
+
+  .contact-wrapper {
+    background: url("../pic/contact-background-m.jpg") no-repeat bottom center scroll;
   }
 
 }

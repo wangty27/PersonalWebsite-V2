@@ -6,13 +6,13 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
-const notifyPass = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
+const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
 
 var transporter = nodemailer.createTransport({
  service: 'gmail',
  auth: {
-        user: 'tianyu.ninja.notify@gmail.com',
-        pass: notifyPass
+        user: notify.email,
+        pass: notify.pass
     }
 });
 
@@ -29,9 +29,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/contact', (req, res) => {
-  console.log(req.body);
   const mailOptions = {
-    from: 'tianyu.ninja.notify@email.com',
+    from: 'tianyu.ninja.notify@gmail.com',
     to: 'terrywang@tianyu.ninja',
     subject: 'New Message From Website',
     html: `<h4>Name: ${req.body.name}<h4>
@@ -41,6 +40,7 @@ app.post('/contact', (req, res) => {
 
   transporter.sendMail(mailOptions, function (err, info) {
     if (err) {
+      console.log(err);
       res.send(JSON.stringify({ success: false }));
     } else {
       res.send(JSON.stringify({ success: true }));
