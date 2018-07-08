@@ -57,6 +57,10 @@ app.post('/contact', (req, res) => {
   });
 })
 
+app.get('/sitemap', (req, res) => {
+  res.sendFile(path.join(__dirname, 'assets', 'sitemap.xml'));
+})
+
 app.use(function (req, res, next) {
   var err = new Error('File Not Found');
   err.status = 404;
