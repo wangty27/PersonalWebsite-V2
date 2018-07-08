@@ -43,8 +43,9 @@ app.post('/contact', (req, res) => {
            <h4>Message: ${req.body.msg}</h4>`
   };
 
-  var messageLog = `Name: ${req.body.name}, Email: ${req.body.email}, Message: ${req.body.msg}, Timestamp: ${moment().tz("America/New_York").format().replace(/T/, ' ').slice(0, 19)}\n`
-  fs.appendFileSync(path.join(__dirname, 'logs', 'message_logs.txt'), messageLog, 'utf8');
+  var messageLog = `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.msg}\nTime: ${moment().tz("America/New_York").format().replace(/T/, ' ').slice(0, 19)}\n\n`
+  var messageLogName = `${moment().tz("America/New_York").format().replace(/T/, ' ').slice(0, 10)}.txt`
+  fs.appendFileSync(path.join(__dirname, 'logs', 'message_logs', messageLogName), messageLog, 'utf8');
 
   transporter.sendMail(mailOptions, function (err, info) {
     if (err) {

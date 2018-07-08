@@ -1,0 +1,59 @@
+*{margin: 0; padding: 0;}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: url('../pic/home-background.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logo {
+  height: inherit;
+  width: inherit;
+}
+
+a {
+  display: block;
+  height: 150px;
+  width: 150px;
+  margin: 30px;
+}
+
+a:hover {
+  -webkit-transform: scale(1.02, 1.02);
+  -moz-transform: scale(1.02, 1.02);
+  -ms-transform: scale(1.02, 1.02);
+  -o-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02);
+  transition: 0.1s all;
+}
+
+#notice1 {
+  font-weight: bold;
+  font-size: 150px;
+}
+
+#notice2 {
+  font-weight: bold;
+  font-size: 44px;
+}
+
+#text {
+  font-size: 17px;
+  margin: 5px;
+}
