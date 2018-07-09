@@ -27,7 +27,7 @@ p {
 
 .text-bullet {
   color: #ffd54f;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 @media (max-width: 767.9px) {
