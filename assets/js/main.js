@@ -79,57 +79,6 @@ $(document).ready(function() {
     smartBackspace: false,
     loop: true
   });
-  //---
-
-  // company direct
-
-  $(".exp-CMDI").on('click', function() {
-    window.location.href="http://www.cmdi.chinamobile.com/";
-  });
-
-  $(".exp-Finastra").on('click', function() {
-    window.location.href="https://www.finastra.com/";
-  });
-
-  //---
-
-  // project direct
-
-  $("#project-MrSchedule").on('click', function() {
-    window.location.href="https://github.com/wtyanan/Mr.Schedule";
-  });
-
-  $("#project-Tetris").on('click', function() {
-    window.location.href="https://github.com/wtyanan/Tetris";
-  });
-
-  $("#project-KWCSSA").on('click', function() {
-    window.location.href="https://github.com/wtyanan/KWCSSACalendar";
-  });
-
-  $("#project-UWMilestone").on('click', function() {
-    window.location.href="https://github.com/wtyanan/UWMilestone";
-  });
-
-  $("#project-FMHelper").on('click', function() {
-    window.location.href="https://github.com/wtyanan/FMHelper";
-  });
-
-  //---
-
-  // contact direct
-
-  $("#contact-github").on('click', function() {
-    window.location.href="https://github.com/wtyanan";
-  });
-
-  $("#contact-email").on('click', function() {
-    window.location.href="mailto:terrywang@tianyu.ninja";
-  });
-
-  $("#contact-linkedin").on('click', function() {
-    window.location.href="https://www.linkedin.com/in/wtyanan/";
-  });
 
   //---
 
