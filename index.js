@@ -1,4 +1,6 @@
+const compression = require('compression');
 const express = require('express');
+const serveStatic = require('serve-static');
 const fs = require('fs');
 const hbs = require('hbs');
 const favicon = require('serve-favicon');
@@ -25,7 +27,11 @@ var app = express();
 
 app.set('view engine', 'hbs');
 
-app.use(express.static(path.join(__dirname, 'assets')));
+app.use(serveStatic(path.join(__dirname, 'assets'), {
+  maxAge: '7d'
+}));
+app.enable('etag');
+app.use(compression());
 app.use(favicon(path.join(__dirname, 'assets', 'pic', 'favicon.ico')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -59,7 +65,7 @@ app.post('/contact', (req, res) => {
 
 app.get('/sitemap', (req, res) => {
   res.sendFile(path.join(__dirname, 'assets', 'sitemap.xml'));
-})
+});
 
 app.use(function (req, res, next) {
   var err = new Error('File Not Found');

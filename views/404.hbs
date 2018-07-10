@@ -3,19 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/404.css"/>
+  <!-- <link rel="stylesheet" href="css/404.css"/> -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   <title>Terry Wang</title>
   <meta name="Description" content="Terry Wang | Student at the University of Waterloo | Passionate Coder | Web Developer | Mobile Developer">
   <meta name="Keywords" content="Personal Website, Terry Wang, Tianyu Wang, wtyanan, Terry (Tianyu) Wang">
 
+  <style>
+  *{margin: 0; padding: 0;}
+
+  body {
+    height: 100%;
+    width: 100%;
+    background: url('../pic/home-background.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  #overlay {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #logo {
+    height: inherit;
+    width: inherit;
+  }
+
+  a {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+  }
+
+  a:hover {
+    -webkit-transform: scale(1.02, 1.02);
+    -moz-transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
+    -o-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
+    transition: 0.1s all;
+  }
+
+  #notice1 {
+    font-weight: bold;
+    font-size: 150px;
+  }
+
+  #notice2 {
+    font-weight: bold;
+    font-size: 44px;
+  }
+
+  #text {
+    font-size: 17px;
+    margin: 5px;
+  }
+
+  </style>
+
 </head>
 <body>
   <div id="overlay">
     <div id="notice1">404</div>
     <div id="notice2">NOT FOUND</div>
-    <a href="/"><img id="logo" src="pic/logo.png" /></a>
+    <a href="/"><img id="logo" src="../pic/logo.png" /></a>
     <div id="text">Sorry, requested page not found.</div>
     <div id="text">Click the logo to Home.</div>
   </div>
