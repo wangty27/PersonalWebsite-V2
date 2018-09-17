@@ -191,74 +191,32 @@
       </div>
       <div class="experience-content">
         <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <a href="http://www.cmdi.chinamobile.com/" class="exp-logo d-flex justify-content-center align-items-center">
-              <div class="exp-CMDI exp-img-wrapper d-flex justify-content-center align-items-center">
-                <img src="pic/exp-CMDI.png" class="img-fluid" title="Go to CMDI" alt="CMDI Logo"/>
+          {{#each experience}}
+            <div class="col-md-6 col-sm-12">
+              <a href="{{this.url}}" class="exp-logo d-flex justify-content-center align-items-center">
+                <div class="exp-CMDI exp-img-wrapper d-flex justify-content-center align-items-center">
+                  <img src="{{this.logoPath}}" class="img-fluid" title="{{this.logoTitle}}" alt="{{this.logoAlt}}"/>
+                </div>
+              </a>
+              <div class="exp-position">
+                {{this.position}}
               </div>
-            </a>
-            <div class="exp-position">
-              Software Developer Internship
-            </div>
-            <div class="exp-name">
-              China Mobile Group Design Institute Co., Ltd.
-            </div>
-            <div class="exp-date">
-              May 2017 - Aug 2017
-            </div>
-            <div class="exp-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented “quick sort” to sort user location data by coordinates for analyzing user behaviors</p>
+              <div class="exp-name">
+                {{this.name}}
               </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Developed a C program that divided Baidu Map into a matrix of coordinates to represent collected data</p>
+              <div class="exp-date">
+                {{this.date}}
               </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Optimized internal website by implementing responsive features for mobile devices</p>
+              <div class="exp-content">
+                {{#each this.content}}
+                  <div class="text-wrapper">
+                    <p class="text-bullet">◉</p>
+                    <p>{{this}}</p>
+                  </div>
+                {{/each}}
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <a href="https://www.finastra.com/" class="exp-logo d-flex justify-content-center align-items-center">
-              <div class="exp-Finastra exp-img-wrapper d-flex justify-content-center align-items-center">
-                <img src="pic/exp-Finastra.png" class="img-fluid" title="Go to Finastra" alt="Finastra Logo"/>
-              </div>
-            </a>
-            <div class="exp-position">
-              Software Developer Internship
-            </div>
-            <div class="exp-name">
-              Finastra
-            </div>
-            <div class="exp-date">
-              May 2018 - Aug 2018
-            </div>
-            <div class="exp-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Worked in an agile software development environment to develop, and update platform modules with JavaScript</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Created a Yeoman generator with package selection for quick microservice scaffolding</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Developed a logging module with NPM package Bunyan and RxJS</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented an Express middleware to validate incoming requests with NPM package AJV and Json Schema</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Built a messaging agent with the ability to send a single or a batch of messages synchronously</p>
-              </div>
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
     </div>
@@ -276,148 +234,26 @@
       </div>
       <div class="project-content">
         <div class="row">
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="project-logo d-flex justify-content-center align-items-center">
-              <a href="https://github.com/wtyanan/Mr.Schedule" id="project-MrSchedule" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-MrSchedule.png" class="project-img" alt="MrSchedule Logo" title="View on GitHub" />
-              </a>
-            </div>
-            <div class="project-name">
-              Mr.Schedule
-            </div>
-            <div class="project-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>A WeChat Miniprogram (embedded in WeChat) provides students a simple timetable to input their courses and view it as a daily schedule</p>
+          {{#each projects}}
+            <div class="col-lg-4 col-sm-6 col-12">
+              <div class="project-logo d-flex justify-content-center align-items-center">
+                <a href="{{this.url}}" id="{{this.id}}" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
+                  <img src="{{this.logoPath}}" class="project-img" alt="{{this.logoAlt}}" title="View on GitHub" />
+                </a>
               </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented input for course information, edit function, and display function</p>
+              <div class="project-name">
+                {{this.name}}
               </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Currently has more than 1900 total users, and an average 15 – 20 active users per day</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <P>Tech Stack: HTML, CSS, Javascript</P>
+              <div class="project-content">
+                {{#each this.content}}
+                <div class="text-wrapper">
+                  <p class="text-bullet">◉</p>
+                  <p>{{this}}</p>
+                </div>
+                {{/each}}
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="project-logo d-flex justify-content-center align-items-center">
-              <a href="https://github.com/wtyanan/Tetris" id="project-Tetris" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-Tetris.png" class="project-img" alt="Tetris Logo" title="View on GitHub" />
-              </a>
-            </div>
-            <div class="project-name">
-              Tetris
-            </div>
-            <div class="project-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>A clone version of the game Tetris developed using C++ in a Group of 3</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Supports 5 different levels, save block, switch block, and hint functions</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Comed up with the idea of Line class which makes movement of blocks easier to implement by allowing them to move without worrying about block collisions</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented core logics including block collisions, block clearing, level changes and score calculating</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Tech Stack: C++</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="project-logo d-flex justify-content-center align-items-center">
-              <a href="https://github.com/wtyanan/KWCSSACalendar" id="project-KWCSSA" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-KWCSSA.png" class="project-img" alt="KWCSSACalendar Logo" title="View on GitHub" />
-              </a>
-            </div>
-            <div class="project-name">
-              KWCSSACalendar
-            </div>
-            <div class="project-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>A “Calendar like” WeChat Miniprogram for KWCSSA (Kitchener – Waterloo Chinese Students & Scholars Association) members to keep track of events</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Supports user groups, event visibility control and event priority display functions</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <P>Tech Stack: HTML, CSS, Javascript</P>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="project-logo d-flex justify-content-center align-items-center">
-              <a href="https://github.com/wtyanan/UWMilestone" id="project-UWMilestone" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-UWMilestone.png" class="project-img" alt="UWMilestone Logo" title="View on GitHub" />
-              </a>
-            </div>
-            <div class="project-name">
-              UW Milestone
-            </div>
-            <div class="project-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>A website for University of Waterloo students to check their academic progress towards graduation</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented user register, user login, and verify email functions</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Currently working on scraping undergraduate calendar for program requirements and displaying data</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <P>Tech Stack: JavaScript, Node.js, Express, MongoDB, Nodemailer, Handlebars, Bootstrap</P>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="project-logo d-flex justify-content-center align-items-center">
-              <a href="https://github.com/wtyanan/FMHelper" id="project-FMHelper" class="project-img-wrapper d-flex justify-cotent-center align-items-center">
-                <img src="pic/project-FMHelper.png" class="project-img" alt="FMHelper Logo" title="View on GitHub" />
-              </a>
-            </div>
-            <div class="project-name">
-              FMHelper
-            </div>
-            <div class="project-content">
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p> A WeChat Miniprogram provides users several financial tools such as mortgage calculator and car lease calculator</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Implemented 6 different financial related calculators using business course formulae</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <p>Currently has more than 350 totol users</p>
-              </div>
-              <div class="text-wrapper">
-                <p class="text-bullet">◉</p>
-                <P>Tech Stack: HTML, CSS, Javascript</P>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-          </div>
+          {{/each}}
         </div>
       </div>
     </div>

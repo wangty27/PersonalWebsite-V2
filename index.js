@@ -36,7 +36,10 @@ app.use(favicon(path.join(__dirname, 'assets', 'pic', 'favicon.ico')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    projects: require('./texts/projects'),
+    experience: require('./texts/experience')
+  });
 })
 
 app.post('/contact', (req, res) => {
