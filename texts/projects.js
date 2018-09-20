@@ -56,7 +56,7 @@ module.exports = [
   },
   {
     id: 'project-UWMilestone',
-    url: 'https://github.com/wtyanan/AutonomousWardrobe',
+    url: 'https://github.com/wtyanan/UWMilestone',
     logoPath: 'pic/project-UWMilestone.png',
     logoAlt: 'UWMilestone Logo',
     name: 'UWMilestone',
