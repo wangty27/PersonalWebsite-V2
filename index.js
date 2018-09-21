@@ -28,7 +28,7 @@ var app = express();
 app.set('view engine', 'hbs');
 
 app.use(serveStatic(path.join(__dirname, 'assets'), {
-  maxAge: '7d'
+  maxAge: '1d'
 }));
 app.enable('etag');
 app.use(compression());
