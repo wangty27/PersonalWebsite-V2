@@ -1,10 +1,21 @@
 module.exports = [
   {
+    url: 'https://www2.deloitte.com/ca/en/pages/technology/articles/welcome-to-d-space.html',
+    logoPath: 'pic/exp-Deloitte.png',
+    logoTitle: 'Go to Deloitte',
+    logoAlt: 'Deloitte Logo',
+    position: 'Software Product Prototyper Co-Op',
+    name: 'Deloitte, Kitchener',
+    date: 'Jan 2019 - Present',
+    content: [
+    ]
+  },
+  {
     url: 'https://www.finastra.com/',
     logoPath: 'pic/exp-Finastra.png',
     logoTitle: 'Go to Finastra',
     logoAlt: 'Finastra Logo',
-    position: 'Software Developer Internship',
+    position: 'Software Developer Co-Op',
     name: 'Finastra, Toronto',
     date: 'May 2018 - Aug 2018',
     content: [
@@ -20,7 +31,7 @@ module.exports = [
     logoPath: 'pic/exp-CMDI.png',
     logoTitle: 'Go to CMDI',
     logoAlt: 'CMDI Logo',
-    position: 'Software Developer Internship',
+    position: 'Software Developer Co-Op',
     name: 'China Mobile Group Design Institute Co., Ltd., Beijing',
     date: 'May 2017 - Aug 2017',
     content: [
