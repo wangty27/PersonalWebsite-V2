@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 app.post('/contact', (req, res) => {
   const mailOptions = {
     from: 'MESSAGE NOTIFY<tianyu.ninja.notify@gmail.com>',
-    to: 'terrywang@tianyu.ninja',
+    to: 'terry@tianyu.wang',
     subject: 'New Message From Website',
     html: `<h4>Name: ${req.body.name}<h4>
            <h4>Email: ${req.body.email}</h4>
