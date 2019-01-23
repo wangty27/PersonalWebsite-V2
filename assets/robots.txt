@@ -1,3 +1,3 @@
 User-agent:*
-Sitemap:https://www.tianyu.ninja/sitemap
+Sitemap:https://www.tianyu.wang/sitemap
 Disallow:
