@@ -8,6 +8,8 @@ module.exports = [
     name: 'Deloitte, Kitchener',
     date: 'Jan 2019 - Present',
     content: [
+      'Built a scraper for USPTO public patent data with NPM package Request and Cheerio',
+      'Using NLP to find patterns and similarities in patents that are held by competing companies'
     ]
   },
   {
