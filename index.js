@@ -8,8 +8,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const moment = require('moment-timezone');
+const request = require('request');
 
 const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
+const UWAPIKEY = require(path.join(__dirname, 'secret', 'UWAPIKEY.js'));
+const APISECRET = require(path.join(__dirname, 'secret', 'APISECRET.js'));
 
 var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -69,6 +72,43 @@ app.post('/contact', (req, res) => {
 app.get('/sitemap', (req, res) => {
   res.sendFile(path.join(__dirname, 'assets', 'sitemap.xml'));
 });
+
+// API usage
+var APIRouter = express.Router();
+APIRouter.get('/courseNameLookup/:term/:subject/:catalog_number', (req, res) => {
+  const {term, subject, catalog_number} = req.params;
+  const requestUrl = `https://api.uwaterloo.ca/v2/terms/${term}/${subject}/${catalog_number}/schedule.json?key=${UWAPIKEY}`;
+  request(requestUrl, (err, response, body) => {
+    if (err) {
+      return res.status(200).json({error: true});
+    } else if (response && response.statusCode === 200) {
+      const result = JSON.parse(body);
+      if (result.meta.message === 'Request successful' && req.query.key === APISECRET) {
+        return res.status(200).json(result.data);
+      } else {
+        return res.status(200).json({error: true});
+      }
+    }
+  });
+});
+APIRouter.get('/courseNumberLookup/:number', (req, res) => {
+  const {number} = req.params;
+  const requestUrl = `https://api.uwaterloo.ca/v2/courses/${number}/schedule.json?key=${UWAPIKEY}`;
+  request(requestUrl, (err, response, body) => {
+    if (err) {
+      return res.status(200).json({error: true});
+    } else if (response && response.statusCode === 200) {
+      const result = JSON.parse(body);
+      if (result.meta.message === 'Request successful' && req.query.key === APISECRET) {
+        return res.status(200).json(result.data);
+      } else {
+        return res.status(200).json({error: true});
+      }
+    }
+  });
+});
+app.use('/api', APIRouter);
+//
 
 app.use(function (req, res, next) {
   var err = new Error('File Not Found');
