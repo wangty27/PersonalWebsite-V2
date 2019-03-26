@@ -1,13 +1,13 @@
 var $window = $(window);
 
-window.onload = function() {
+window.onload = function () {
   $("#loading-mask").fadeOut(600)
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   // navbar + gotoTop
 
-  if ($window.scrollTop() > 200){
+  if ($window.scrollTop() > 200) {
     $("#header").addClass("bg-black");
   }
 
@@ -18,8 +18,8 @@ $(document).ready(function() {
   }
 
   var toggle = false;
-  $window.scroll(function() {
-    if ($(this).scrollTop() <= 200 && !toggle){
+  $window.scroll(function () {
+    if ($(this).scrollTop() <= 200 && !toggle) {
       $("#header").removeClass("bg-black");
     } else {
       $("#header").addClass("bg-black");
@@ -31,7 +31,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.navbar-toggler').click(function() {
+  $('.navbar-toggler').click(function () {
     if ($window.scrollTop() <= 200 && toggle) {
       $("#header").removeClass("bg-black");
     } else {
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $(".nav-link").removeClass("pl-3");
   }
 
-  $window.resize(function() {
+  $window.resize(function () {
     if ($window.width() < 768) {
       $(".nav-item").removeClass("ml-2");
       $(".nav-link").addClass("pl-3");
@@ -59,7 +59,7 @@ $(document).ready(function() {
   })
   //---
 
-  $("a").on('click', function(event) {
+  $("a").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, "easeInOutQuint", function(){
+      }, 1000, "easeInOutQuint", function () {
         window.location.hash = hash;
       });
     }
@@ -76,7 +76,7 @@ $(document).ready(function() {
   // typed
 
   var identity = new Typed('#identity', {
-    strings: ['&nbsp', 'Student @ UWaterloo.', 'Passionate Coder.', 'Full-Stack Developer.', 'Software Developer.', 'Mobile Developer.' ],
+    strings: ['&nbsp', 'Student @ UWaterloo.', 'Passionate Coder.', 'Full-Stack Developer.', 'Software Developer.', 'Mobile Developer.'],
     typeSpeed: 80,
     backSpeed: 50,
     backDelay: 1500,
@@ -87,35 +87,34 @@ $(document).ready(function() {
   // ---
 
   $("#contact-form").submit(function (e) {
-      e.preventDefault();
+    e.preventDefault();
 
-      const name = $("#name").val();
-      const email = $("#email").val();
-      const msg = $("#msg").val();
-      var data = { name, email, msg };
-      var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-      if (!re.test(String(email).toLowerCase())){
-        $('#email').attr("placeholder","Please enter a valid E-mail");
-        $("#email").val("")
-        $("#email").addClass("invalid-input");
-      } else {
-        $("#contact-inputs").fadeOut(500);
-        $('#contact-loading').delay(501).fadeIn(500);
-        $.ajax({
-          type: "POST",
-          url: "/contact",
-          data: data,
-          dataType: "json",
-          success: (data) => {
-            $("#contact-loading").delay(300).fadeOut(500);
-            if (data.success) {
-              $(".contact-thank").delay(900).fadeIn(500);
-            } else {
-              $(".contact-fail").delay(1800).fadeIn(500);
-            }
+    const name = $("#name").val();
+    const email = $("#email").val();
+    const msg = $("#msg").val();
+    var data = { name, email, msg };
+    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!re.test(String(email).toLowerCase())) {
+      $('#email').attr("placeholder", "Please enter a valid E-mail");
+      $("#email").val("")
+      $("#email").addClass("invalid-input");
+    } else {
+      $("#contact-inputs").fadeOut(500);
+      $('#contact-loading').delay(501).fadeIn(500);
+      $.ajax({
+        type: "POST",
+        url: "/contact",
+        data: data,
+        dataType: "json",
+        success: (data) => {
+          $("#contact-loading").delay(300).fadeOut(500);
+          if (data.success) {
+            $(".contact-thank").delay(900).fadeIn(500);
+          } else {
+            $(".contact-fail").delay(1800).fadeIn(500);
           }
-        });
-      }
-    });
-
+        }
+      });
+    }
+  });
 });
