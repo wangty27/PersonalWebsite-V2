@@ -62,3 +62,6 @@ typings/
 
 # secret files
 secret/
+
+# mac DS_Store
+.DS_Store
