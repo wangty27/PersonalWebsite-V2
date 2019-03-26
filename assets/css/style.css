@@ -2,6 +2,49 @@
 
 /* global style */
 
+@keyframes loadAnimation {
+  0%   { transform: scale(1, 1);}
+  50%  { transform: scale(1.2, 1.2);}
+  100% { transform: scale(1, 1);}
+}
+@-o-keyframes loadAnimation{
+  0%   { transform: scale(1, 1);}
+  50%  { transform: scale(1.2, 1.2);}
+  100% { transform: scale(1, 1);}
+}
+@-moz-keyframes loadAnimation{
+  0%   { transform: scale(1, 1);}
+  50%  { transform: scale(1.2, 1.2);}
+  100% { transform: scale(1, 1);}
+}
+@-webkit-keyframes loadAnimation{
+  0%   { transform: scale(1, 1);}
+  50%  { transform: scale(1.2, 1.2);}
+  100% { transform: scale(1, 1);}
+}
+
+#loading-mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-pic {
+  height: 120px;
+  width: 120px;
+  -webkit-animation: loadAnimation 1.5s infinite;
+  -moz-animation: loadAnimation 1.5s infinite;
+  -o-animation: loadAnimation 1.5s infinite;
+  animation: loadAnimation 1.5s infinite;
+}
+
 .hide {
   display: none !important;
 }

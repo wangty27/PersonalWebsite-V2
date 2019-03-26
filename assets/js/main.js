@@ -1,5 +1,9 @@
 var $window = $(window);
 
+window.onload = function() {
+  $("#loading-mask").fadeOut(600)
+};
+
 $(document).ready(function() {
   // navbar + gotoTop
 
