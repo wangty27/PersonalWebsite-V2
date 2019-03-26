@@ -37,7 +37,7 @@ module.exports = [
     content: [
       'A clone version of the game Tetris developed using C++ in a Group of 3',
       'Supports 5 different levels, save block, switch block, and hint functions',
-      'Comed up with the idea of Line class which makes movement of blocks easier to implement by allowing them to move without worrying about block collisions',
+      'Came up with the idea of Line class which makes movement of blocks easier to implement by allowing them to move without worrying about block collisions',
       'Implemented core logics including block collisions, block clearing, level changes and score calculating',
       'Tech Stack: C++'
     ]

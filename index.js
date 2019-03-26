@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const moment = require('moment-timezone');
 const request = require('request');
+const requestP = require('request-promise');
 
 const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
 const UWAPIKEY = require(path.join(__dirname, 'secret', 'UWAPIKEY.js'));
@@ -91,21 +92,34 @@ APIRouter.get('/courseNameLookup/:term/:subject/:catalog_number', (req, res) => 
     }
   });
 });
-APIRouter.get('/courseNumberLookup/:number', (req, res) => {
-  const {number} = req.params;
-  const requestUrl = `https://api.uwaterloo.ca/v2/courses/${number}/schedule.json?key=${UWAPIKEY}`;
-  request(requestUrl, (err, response, body) => {
-    if (err) {
+APIRouter.get('/courseListLookup/:catalogList/:classList/:term', async (req, res) => {
+  if (!(req.query.key === APISECRET)) {
+    return res.status(200).json({error: true});
+  }
+  const {catalogList, classList, term} = req.params;
+  const courseList = catalogList.split(',');
+  const courseNumberList = classList.split(',');
+  const termList = term.split(',');
+  const returnObj = [];
+  for (i in courseList) {
+    const subject = courseList[i].replace(/[0-9]/g, '').replace(/\s/g, '');
+    const catalog_number = courseList[i].replace(/^\D+/g, '').replace(/\s/g, '');
+    const requestUrl = `https://api.uwaterloo.ca/v2/terms/${termList[i]}/${subject}/${catalog_number}/schedule.json?key=${UWAPIKEY}`;
+    var options = {
+      uri: requestUrl,
+      headers: {
+        'User-Agent': 'Request-Promise'
+      },
+      json: true
+    };
+    var result = await requestP(options);
+    if (!result.meta.message === 'Request successful') {
       return res.status(200).json({error: true});
-    } else if (response && response.statusCode === 200) {
-      const result = JSON.parse(body);
-      if (result.meta.message === 'Request successful' && req.query.key === APISECRET) {
-        return res.status(200).json(result.data);
-      } else {
-        return res.status(200).json({error: true});
-      }
     }
-  });
+    result = result.data.filter(course => course.class_number.toString() === courseNumberList[i]);
+    returnObj.push(result[0]);
+  }
+  res.status(200).json(returnObj);
 });
 app.use('/api', APIRouter);
 //
