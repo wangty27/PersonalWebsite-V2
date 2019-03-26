@@ -6,7 +6,7 @@ module.exports = [
     logoAlt: 'Deloitte Logo',
     position: 'Software Product Prototyper Co-Op',
     name: 'Deloitte, Kitchener',
-    date: 'Jan 2019 - Present',
+    date: 'Jan 2019 - Apr 2019',
     content: [
       'Built a scraper for USPTO public patent data with NPM package Request and Cheerio',
       'Using NLP to find patterns and similarities in patents that are held by competing companies'

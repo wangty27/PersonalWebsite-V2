@@ -73,14 +73,14 @@ $(document).ready(function() {
 
   var identity = new Typed('#identity', {
     strings: ['&nbsp', 'Student @ UWaterloo.', 'Passionate Coder.', 'Full-Stack Developer.', 'Software Developer.', 'Mobile Developer.' ],
-    typeSpeed: 100,
+    typeSpeed: 80,
     backSpeed: 50,
     backDelay: 1500,
     smartBackspace: false,
     loop: true
   });
 
-  //---
+  // ---
 
   $("#contact-form").submit(function (e) {
       e.preventDefault();

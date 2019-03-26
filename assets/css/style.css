@@ -256,8 +256,8 @@ p {
   cursor: pointer;
 }
 
-.arrow-down-pic {
-}
+/* .arrow-down-pic {
+} */
 
 .text-ubuntu {
   font-family: 'Ubuntu', sans-serif;
@@ -358,35 +358,67 @@ p {
   transition: 0.1s all;
 }
 
-/* company */
-.exp-CMDI {
+.exp-logo-pic {
   background: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 12px;
 }
-
-.exp-Finastra {
-  background: #ffffff;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-/* End */
 
 .exp-position {
   text-align: center;
-  font-size: 24px;
-  margin-top: 12px;
-  margin-bottom: 8px;
+  font-size: 22px;
 }
 
 .exp-name {
   text-align: center;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 15px;
+  opacity: 0.8;
 }
 
 .exp-date {
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exp-marker {
+  height: 45px !important;
+  width: 45px !important;
+  color: #232323;
+  background: #ffd54f;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+
+.exp-line {
+  width: 3px;
+  height: 100%;
+  background: #ffd54f;
+}
+
+.exp-line-end {
+  width: 3px;
+  height: 50px;
+  background-image: linear-gradient(#ffd54f 10%, #232323 90%);
+  /* border: 0.1px solid red; */
+}
+
+.exp-line-start {
+  width: 3px;
+  height: 50px;
+  background-image: linear-gradient(#232323 10%, #ffd54f 90%);
+  /* border: 0.1px solid red; */
 }
 
 @media(max-width: 767.9px) {
@@ -437,6 +469,9 @@ p {
 .project-content {
   margin-bottom: 75px;
 }
+
+/* .project-text {
+} */
 
 /* End */
 

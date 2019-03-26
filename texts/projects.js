@@ -1,5 +1,19 @@
 module.exports = [
   {
+    id: 'project-WATCOURSE',
+    url: 'https://github.com/wtyanan/WATCOURSE',
+    logoPath: 'pic/project-WATCOURSE.png',
+    logoAlt: 'WATCOURSE Logo',
+    name: 'WATCOURSE',
+    content: [
+      'A WeChat Miniprogram allows students to search UWaterloo most updated course information (enrollment total/capacity, time slot, instructor...)',
+      'Implemented search and bookmark feature, allowing students to save and update specific courses',
+      'Built API endpoints with Express.js to support single-course and multi-course searching, significantly reduced the number of API calls from the miniprogram',
+      'Powered by UWaterloo Open Data API',
+      'Tech Stack: Node.js, Express.js, HTML, CSS, JavaScript'
+    ]
+  },
+  {
     id: 'project-AutonomousWardrobe',
     url: 'https://github.com/wtyanan/AutonomousWardrobe',
     logoPath: 'pic/project-AutonomousWardrobe.png',
@@ -11,7 +25,7 @@ module.exports = [
       'Implemented dominant clothing color RGB value extraction with NPM Package huey',
       'Created a simple neural network for suggesting color combination based on RGB value with NPM Package brain.js',
       'Developed at Hack the North 2018',
-      'Tech Stack: Node.js, Express, MongoDB, Handlebars, Bootstrap 4'
+      'Tech Stack: Node.js, Express.js, MongoDB, Handlebars, Bootstrap 4'
     ]
   },
   {
@@ -25,7 +39,7 @@ module.exports = [
       'Implemented input for course information, edit function, and display function',
       'Implemented dominant clothing color RGB value extraction with NPM Package huey',
       'Currently has more than 1900 total users, and an average 15 – 20 active users per day',
-      'Tech Stack: HTML, CSS, Javascript'
+      'Tech Stack: HTML, CSS, JavaScript'
     ]
   },
   {
@@ -51,7 +65,7 @@ module.exports = [
     content: [
       'A “Calendar like” WeChat Miniprogram for KWCSSA (Kitchener – Waterloo Chinese Students & Scholars Association) members to keep track of events',
       'Supports user groups, event visibility control and event priority display functions',
-      'Tech Stack: HTML, CSS, Javascript'
+      'Tech Stack: HTML, CSS, JavaScript'
     ]
   },
   {
@@ -64,7 +78,7 @@ module.exports = [
       'A website for University of Waterloo students to check their academic progress towards graduation',
       'Implemented user register, user login, and email verification functions',
       'Currently working on scraping undergraduate calendar for program requirements and displaying data',
-      'Tech Stack: JavaScript, Node.js, Express, MongoDB, Nodemailer, Handlebars, Bootstrap 4'
+      'Tech Stack: Node.js, Express.js, MongoDB, Nodemailer, Handlebars, Bootstrap 4'
     ]
   },
   {
@@ -77,7 +91,7 @@ module.exports = [
       'A WeChat Miniprogram provides users several financial tools such as mortgage calculator and car lease calculator',
       'Implemented 6 different financial related calculators using business course formulae',
       'Currently has more than 350 totol users',
-      'Tech Stack: HTML, CSS, Javascript'
+      'Tech Stack: HTML, CSS, JavaScript'
     ]
   },
 ];
