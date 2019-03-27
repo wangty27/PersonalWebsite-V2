@@ -11,21 +11,21 @@ const moment = require('moment-timezone');
 const request = require('request');
 const requestP = require('request-promise');
 
-// const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
-// const UWAPIKEY = require(path.join(__dirname, 'secret', 'UWAPIKEY.js'));
-// const APISECRET = require(path.join(__dirname, 'secret', 'APISECRET.js'));
+const notify = require(path.join(__dirname, 'secret', 'PASSWORD.js'));
+const UWAPIKEY = require(path.join(__dirname, 'secret', 'UWAPIKEY.js'));
+const APISECRET = require(path.join(__dirname, 'secret', 'APISECRET.js'));
 
-// var transporter = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: notify.email,
-//     pass: notify.pass
-//   },
-//   connectionTimeout: 30000,
-//   greetingTimeout: 30000
-// });
+var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: notify.email,
+    pass: notify.pass
+  },
+  connectionTimeout: 30000,
+  greetingTimeout: 30000
+});
 
 var app = express();
 

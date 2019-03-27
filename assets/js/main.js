@@ -1,7 +1,7 @@
 var $window = $(window);
 
 window.onload = function () {
-  $("#loading-mask").fadeOut(600)
+  $("#loading-mask").fadeOut(400)
 };
 
 $(document).ready(function () {
