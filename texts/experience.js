@@ -10,7 +10,8 @@ module.exports = [
     content: [
       'Built a scraper for USPTO public patent data with NPM package Request and Cheerio',
       'Using NLP to find patterns and similarities in patents that are held by competing companies'
-    ]
+    ],
+    latest: true
   },
   {
     url: 'https://www.finastra.com/',
@@ -26,7 +27,8 @@ module.exports = [
       'Developed a logging module with NPM package Bunyan and RxJS',
       'Implemented an Express middleware to validate incoming requests with NPM package AJV and Json Schema',
       'Built a messaging agent with the ability to send a single or a batch of messages synchronously'
-    ]
+    ],
+    latest: false
   },
   {
     url: 'http://www.cmdi.chinamobile.com/',
@@ -40,6 +42,7 @@ module.exports = [
       'Implemented “quick sort” to sort user location data by coordinates for analyzing user behaviors',
       'Developed a C program that divided Baidu Map into a matrix of coordinates to represent collected data',
       'Optimized internal website by implementing responsive features for mobile devices'
-    ]
+    ],
+    latest: false
   }
 ];
